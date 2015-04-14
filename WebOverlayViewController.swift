@@ -15,9 +15,11 @@ class WebOverlayViewController: UIViewController, UIWebViewDelegate{
     @IBOutlet weak var progressBar: UIProgressView!
     var theBool: Bool = false
     var myTimer: NSTimer = NSTimer()
+    var counter: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Loading"
         // Do any additional setup after loading the view, typically from a nib.
         let url = NSURL (string: "http://m.schedulefly.com/myaccount.aspx");
         let requestObj = NSURLRequest(URL: url!);
@@ -39,9 +41,13 @@ class WebOverlayViewController: UIViewController, UIWebViewDelegate{
     }
     
     func webViewDidFinishLoad(webView: UIWebView!) {
+        self.title = "Edit Account"
         let user = UserInfo()
         let username: String = user.getUsername()
         let password: String = user.getPassword()
+        let cleanUpJS: String = "document.getElementById('header').style.display = 'none'; document.getElementById('footer').style.display = 'none'"
+        webView.stringByEvaluatingJavaScriptFromString(cleanUpJS)
+
         
         if (username != "" && password != "") {
             let loadLoginJS = "document.getElementById('userid').value = '\(password)';document.getElementById('password').value = document.getElementById('userid').value; document.getElementById('userid').value = '\(username)';document.forms[0].submit()"
@@ -67,14 +73,20 @@ class WebOverlayViewController: UIViewController, UIWebViewDelegate{
             }
         } else {
             self.progressBar.progress += 0.01
+            counter++
+            if (counter == 10) {
+                counter = 0
+                if self.title != "Edit Account" {
+                    if self.title == "Loading..." {
+                        self.title = "Loading"
+                    }
+                    self.title = self.title! + "."
+                }
+            }
             if self.progressBar.progress >= 0.95 {
                 self.progressBar.progress = 0.95
             }
         }
-    }
-    
-    @IBAction func doneButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     /*

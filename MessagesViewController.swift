@@ -13,12 +13,14 @@ class MessagesViewController: UIViewController, UIWebViewDelegate{
     
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var titleBar: UINavigationBar!
     var theBool: Bool = false
     var myTimer: NSTimer = NSTimer()
+    var counter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        titleBar.topItem?.title = "Loading"
         // Do any additional setup after loading the view, typically from a nib.
         let url = NSURL (string: "http://m.schedulefly.com/");
         let requestObj = NSURLRequest(URL: url!);
@@ -40,9 +42,13 @@ class MessagesViewController: UIViewController, UIWebViewDelegate{
     }
     
     func webViewDidFinishLoad(webView: UIWebView!) {
+        titleBar.topItem?.title = "Messages"
         let user = UserInfo()
         let username: String = user.getUsername()
         let password: String = user.getPassword()
+        let cleanUpJS: String = "document.getElementById('header').style.display = 'none'; document.getElementById('footer').style.display = 'none'"
+        webView.stringByEvaluatingJavaScriptFromString(cleanUpJS)
+
         
         if (username != "" && password != "") {
             let loadLoginJS = "document.getElementById('userid').value = '\(password)';document.getElementById('password').value = document.getElementById('userid').value; document.getElementById('userid').value = '\(username)';document.forms[0].submit()"
@@ -68,16 +74,25 @@ class MessagesViewController: UIViewController, UIWebViewDelegate{
             }
         } else {
             self.progressBar.progress += 0.01
+            counter++
+            if (counter == 10) {
+                counter = 0
+                if titleBar.topItem?.title != "Messages" {
+                    if titleBar.topItem?.title == "Loading..." {
+                        titleBar.topItem?.title = "Loading"
+                    }
+                    titleBar.topItem?.title? += "."
+                }
+            }
             if self.progressBar.progress >= 0.95 {
                 self.progressBar.progress = 0.95
             }
         }
     }
     
-    @IBAction func doneButton(sender: AnyObject) {
+    @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
     /*
     // MARK: - Navigation
     

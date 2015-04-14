@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		730447DC1ACF6EA9009EB0A3 /* takeshift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 730447DB1ACF6EA9009EB0A3 /* takeshift.jpg */; };
+		730447DE1ACF6EB4009EB0A3 /* timeoff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 730447DD1ACF6EB4009EB0A3 /* timeoff.jpg */; };
+		730447E31ACF72F8009EB0A3 /* TimeOffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730447E21ACF72F8009EB0A3 /* TimeOffViewController.swift */; };
+		730447E51ACF730C009EB0A3 /* PickupShiftsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730447E41ACF730C009EB0A3 /* PickupShiftsViewController.swift */; };
 		73854E831AC7BE55007A301E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73854E821AC7BE55007A301E /* AppDelegate.swift */; };
 		73854E851AC7BE55007A301E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73854E841AC7BE55007A301E /* FirstViewController.swift */; };
 		73854E871AC7BE55007A301E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73854E861AC7BE55007A301E /* SecondViewController.swift */; };
@@ -42,6 +46,10 @@
 /* Begin PBXFileReference section */
 		21FE133B53CF20326360747E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5014D82AC341977BDFE23B66 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		730447DB1ACF6EA9009EB0A3 /* takeshift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = takeshift.jpg; sourceTree = "<group>"; };
+		730447DD1ACF6EB4009EB0A3 /* timeoff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timeoff.jpg; sourceTree = "<group>"; };
+		730447E21ACF72F8009EB0A3 /* TimeOffViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeOffViewController.swift; sourceTree = "<group>"; };
+		730447E41ACF730C009EB0A3 /* PickupShiftsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupShiftsViewController.swift; sourceTree = "<group>"; };
 		73854E7D1AC7BE55007A301E /* ScheduleBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73854E811AC7BE55007A301E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73854E821AC7BE55007A301E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		730447E11ACF703B009EB0A3 /* TimeOffAndPickup */ = {
+			isa = PBXGroup;
+			children = (
+				730447E21ACF72F8009EB0A3 /* TimeOffViewController.swift */,
+				730447E41ACF730C009EB0A3 /* PickupShiftsViewController.swift */,
+			);
+			name = TimeOffAndPickup;
+			sourceTree = "<group>";
+		};
 		73854E741AC7BE55007A301E = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +131,7 @@
 		73854E7F1AC7BE55007A301E /* ScheduleBird */ = {
 			isa = PBXGroup;
 			children = (
+				730447E11ACF703B009EB0A3 /* TimeOffAndPickup */,
 				73A3B0A41ACCCD0A00531FB4 /* Sidebar */,
 				73854E821AC7BE55007A301E /* AppDelegate.swift */,
 				73854E841AC7BE55007A301E /* FirstViewController.swift */,
@@ -159,6 +177,8 @@
 		73A3B0901ACB41B300531FB4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				730447DB1ACF6EA9009EB0A3 /* takeshift.jpg */,
+				730447DD1ACF6EB4009EB0A3 /* timeoff.jpg */,
 				73A3B0951ACB6DAB00531FB4 /* feet.JPG */,
 				73A3B0931ACB536400531FB4 /* beach.gif */,
 				73A3B0911ACB41C200531FB4 /* forest.gif */,
@@ -283,10 +303,12 @@
 			files = (
 				73854E8A1AC7BE55007A301E /* Main.storyboard in Resources */,
 				73854E8F1AC7BE56007A301E /* LaunchScreen.xib in Resources */,
+				730447DE1ACF6EB4009EB0A3 /* timeoff.jpg in Resources */,
 				73A3B0921ACB41C200531FB4 /* forest.gif in Resources */,
 				73854E8C1AC7BE55007A301E /* Images.xcassets in Resources */,
 				73A3B0941ACB536400531FB4 /* beach.gif in Resources */,
 				73A3B0961ACB6DAB00531FB4 /* feet.JPG in Resources */,
+				730447DC1ACF6EA9009EB0A3 /* takeshift.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,12 +380,14 @@
 				73A3B09F1ACC744600531FB4 /* SWRevealViewController.m in Sources */,
 				73854E831AC7BE55007A301E /* AppDelegate.swift in Sources */,
 				73854EAB1AC7BF2D007A301E /* LoginViewController.swift in Sources */,
+				730447E51ACF730C009EB0A3 /* PickupShiftsViewController.swift in Sources */,
 				73A3B0AF1ACE240500531FB4 /* WallViewController.swift in Sources */,
 				73A3B0A61ACD11AE00531FB4 /* AccountTableViewCell.swift in Sources */,
 				73A3B0A31ACCC98000531FB4 /* AccountTableViewController.swift in Sources */,
 				73A3B0AA1ACDD8FC00531FB4 /* WebOverlayViewController.swift in Sources */,
 				73A3B0AD1ACE0EE200531FB4 /* MessagesViewController.swift in Sources */,
 				73854E851AC7BE55007A301E /* FirstViewController.swift in Sources */,
+				730447E31ACF72F8009EB0A3 /* TimeOffViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

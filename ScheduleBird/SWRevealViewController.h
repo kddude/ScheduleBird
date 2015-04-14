@@ -157,7 +157,7 @@ typedef NS_ENUM( NSInteger, FrontViewPosition)
     // Center position, rear view is hidden behind front controller
 	FrontViewPositionLeft,
     
-    // Right possition, front view is presented right-offseted by rearViewRevealWidth
+    // Right possition, front view is presented right-offseted by `iewRevealWidth
 	FrontViewPositionRight,
     
     // Right most possition, front view is presented right-offseted by rearViewRevealWidth+rearViewRevealOverdraw

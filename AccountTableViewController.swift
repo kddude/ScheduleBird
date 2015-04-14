@@ -15,7 +15,7 @@ class AccountTableViewController: UITableViewController, UITableViewDataSource {
     override func viewDidLoad() {
         // ID, ACTIVE, FNAME, LNAME, USERID, EMAIL, CELLPHONE, CATEGORYID, PHOTOURL, ADMIN
         super.viewDidLoad()
-        var accLabels = ["FNAME", "LNAME", "USERID", "EMAIL", "CELLPHONE", "CATEGORYID", "PHOTOURL"]
+        var accLabels = ["FNAME", "LNAME", "USERID", "EMAIL", "CELLPHONE", "CATEGORY", "PHOTOURL"]
         var fname: String = ""
         var lname: String = ""
         
@@ -54,10 +54,6 @@ class AccountTableViewController: UITableViewController, UITableViewDataSource {
         println(accountTableValues)
         
         tableView.estimatedRowHeight = 50
-    }
-    
-    @IBAction func closeButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     @IBAction func editButton(sender: AnyObject) {
@@ -99,6 +95,9 @@ class AccountTableViewController: UITableViewController, UITableViewDataSource {
 
     }
     
+    @IBAction func closeButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.

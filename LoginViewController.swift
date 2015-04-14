@@ -135,6 +135,35 @@ class LoginViewController: UIViewController {
                     
                 }
             }
+            
+            
+            
+            let custom1: (URLRequestConvertible, [String: AnyObject]?) -> (NSURLRequest, NSError?) = {
+                (URLRequest, parameters) in
+                var soapMessage = "<?xml version='1.0' encoding='utf-8'?><soap12:Envelope xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:soap12='http://www.w3.org/2003/05/soap-envelope'><soap12:Body><getStaffCategories xmlns='http://www.schedulefly.com/api/'><acct_userid>\(self.usernameField.text)</acct_userid><acct_password>\(self.passwordField.text)</acct_password></getStaffCategories></soap12:Body></soap12:Envelope>"
+                var theRequest = NSMutableURLRequest(URL: NSURL(string: "http://api.schedulefly.com/webservice.asmx")!)
+                theRequest.addValue("application/soap+xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
+                theRequest.addValue(String(countElements(soapMessage)), forHTTPHeaderField: "Content-Length")
+                theRequest.HTTPBody = soapMessage.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) // or false
+                
+                let mutableURLRequest = URLRequest.URLRequest.mutableCopy() as NSMutableURLRequest
+                mutableURLRequest.setValue("application/soap+xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
+                mutableURLRequest.setValue(String(countElements(soapMessage)), forHTTPHeaderField: "Content-Length")
+                mutableURLRequest.HTTPBody = theRequest.HTTPBody
+                return (mutableURLRequest, nil)
+            }
+            
+            Alamofire.request(.POST, "http://api.schedulefly.com/webservice.asmx", parameters: Dictionary(), encoding: .Custom(custom1)).responseString { (request, response, data, error) -> Void in
+                
+                if (error == nil) {
+                    let callType = "getStaffCategories"
+                    println(data!)
+                    var xmlD = SWXMLHash.parse(data!)
+                    var xmlData = ParseXML(data: xmlD, callType: callType)
+                    xmlData.getElementValues()
+                    println(xmlData.elementsDict)
+                }
+            }
         }
     }
     

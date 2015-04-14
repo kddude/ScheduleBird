@@ -22,9 +22,11 @@ class FirstViewController: UIViewController {
         
         if self.revealViewController() != nil {
             personalButton.target = self.revealViewController().rightViewController
-            personalButton.action = "revealToggle:"
+            personalButton.action = "rightRevealToggle:FrontViewPositionRightMost"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        tabBarController?.tabBar.barTintColor = UIColor(red: 37.0, green: 39.0, blue: 42.0, alpha: 0.0)
 
     }
 
@@ -40,10 +42,6 @@ class FirstViewController: UIViewController {
         if (isLoggedIn != 1) {
             self.performSegueWithIdentifier("goto_login", sender: self)
         }
-    }
-
-    @IBAction func personalButtonPressed(sender: AnyObject) {
-        self.performSegueWithIdentifier("goto_personal", sender: self)
     }
 
 }

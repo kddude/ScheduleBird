@@ -63,53 +63,80 @@ class ParseXML {
     }
     
     func makeDict(upperRange: Int) {
-        for i in Range(0..<upperRange) {
-            for ele in elements {
-                if (ele != elements[0]) {
-                    var key = ele
-                    var value = dataToParse["soap:Envelope"]["soap:Body"]["\(callType)Response"]["\(callType)Result"][elements[0]][i][ele].element?.text!
-                    elementsDict[key] = "\(value)\(i)"
+        switch callType {
+        case "getAdminScheduledShifts":
+        // IMPLEMENT
+        break
+        case "getAllStaff", "getStaff":
+        break
+        case "getJobOpenings":
+        // iMPLEMENT
+        break
+        case "getJobOpenings2":
+        //IMPLEMENT
+        break
+        case "getScheduledShifts":
+        // IMPLEMENT
+        break
+        case "getScheduledShiftsForEmployee":
+        // IMPLEMENT
+        break
+        case "getStaffCategories":
+            for i in Range(0..<upperRange) {
+                for ele in elements {
+                    if (ele == elements[0]) {
+                        var key = dataToParse["soap:Envelope"]["soap:Body"]["\(callType)Response"]["\(callType)Result"][elements[0]][i][elements[1]].element?.text!
+                        var value = dataToParse["soap:Envelope"]["soap:Body"]["\(callType)Response"]["\(callType)Result"][elements[0]][i][elements[2]].element?.text!
+                        elementsDict[key!] = "\(value!)"
+                    }
+                }
+                println(elementsDict)
+            }
+            let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+            if let categoryID:String = prefs.stringForKey("CATEGORYID") {
+                prefs.setValue(elementsDict[categoryID], forKey: "CATEGORY")
+            }
+            
+        case "getStaffInfo", "getStaffDetails":
+            for i in Range(0..<upperRange) {
+                for ele in elements {
+                    if (ele != elements[0]) {
+                        var key = ele
+                        var value = dataToParse["soap:Envelope"]["soap:Body"]["\(callType)Response"]["\(callType)Result"][elements[0]][i][ele].element?.text!
+                        elementsDict[key] = "\(value)\(i)"
+                    }
                 }
             }
+        default:
+            break
         }
     }
     
-    func getElementValues() {
+    func getElementValues() -> Void{
         getElements(dataToParse)
-        switch callType {
-        case "getAdminScheduledShifts":
-            // IMPLEMENT
-            break
-        case "getAllStaff", "getStaff":
-            makeDict(elements.count-elements.count/12)
-        case "getJobOpenings":
-            // iMPLEMENT
-            break
-        case "getJobOpenings2":
-            //IMPLEMENT
-            break
-        case "getScheduledShifts":
-            // IMPLEMENT
-            break
-        case "getScheduledShiftsForEmployee":
-            // IMPLEMENT
-            break
-        case "getStaffCategories":
-            makeDict(elements.count-elements.count/3)
-        case "getStaffInfo", "getStaffDetails":
+        if (callType == "getStaffDetails" || callType=="getStaffInfo")  {
             for ele in elements {
                 var key = ele
                 var value = dataToParse["soap:Envelope"]["soap:Body"]["\(callType)Response"]["Staff"][ele].element?.text
                 elementsDict[key] = value
             }
-        default:
+        } else if (self.callType == "getAdminScheduledShifts" ||
+        callType=="getAllStaff" ||
+        callType=="getStaff" ||
+        callType=="getJobOpenings" ||
+        callType=="getJobOpenings2" ||
+        callType=="getScheduledShifts" ||
+        callType=="getScheduledShiftsForEmployee" ||
+        callType=="getStaffCategories") {
+            let count = NSSet(array: self.elements).count
+            makeDict(elements.count/count)
+        } else {
             var alertView:UIAlertView = UIAlertView()
             alertView.title = "Error!"
             alertView.message = "Call type not recognized."
             alertView.delegate = self
             alertView.addButtonWithTitle("OK")
             alertView.show()
-
         }
         
     }
@@ -133,6 +160,7 @@ class ParseXML {
             return true
         }
     }
+    
 }
 
 
