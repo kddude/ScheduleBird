@@ -15,7 +15,7 @@ struct UserInfo {
         var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         if let uname:String = prefs.stringForKey("USERNAME") {
             let (userCredentials, error) = Locksmith.loadDataForUserAccount(uname)
-            let pword: String = userCredentials![uname] as String
+            let pword: String = userCredentials![uname] as! String
             
             return pword as String
         }

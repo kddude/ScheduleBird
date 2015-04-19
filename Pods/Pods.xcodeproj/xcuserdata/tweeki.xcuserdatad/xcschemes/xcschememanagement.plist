@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-IJReachability.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Locksmith-Locksmith.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0C32E7BF2519EA3A92E16BE0</key>
+		<key>0B9FACF58AE017A3CC9461E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0D6508E17A63460B1D9BB9D7</key>
+		<key>7473041E4E6FA220B7B74FF6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>46121B610CC55D8154219D9D</key>
+		<key>9AAC919155CF51E555EEEF35</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A184501D9935DFDC8B3E01BE</key>
+		<key>BB887FECA62B641BEB3A4EF6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BD35483AC790ED92CA6B6174</key>
+		<key>C783518767247E191A7741C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C1F95ECE4553492EF458984A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F49835D208635C50A9C951E8</key>
+		<key>DA9DA67842BEF7F72901C205</key>
 		<dict>
 			<key>primary</key>
 			<true/>

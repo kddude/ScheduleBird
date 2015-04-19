@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var pwUnderline: UIImageView!
     @IBOutlet weak var unUnderline: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var gravity: UIGravityBehavior!
     var animator: UIDynamicAnimator!
@@ -62,6 +63,12 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        scrollView.scrollEnabled = true
+        scrollView.contentSize = CGSize(width:10, height:10)
+    }
+    
     @IBAction func loginButton() {
         if (usernameField.text == "" || passwordField.text == "") {
             let alertController: UIAlertController = UIAlertController(title: "Please enter both username and password", message: nil, preferredStyle: .Alert)
@@ -87,12 +94,12 @@ class LoginViewController: UIViewController {
                 var soapMessage = "<?xml version='1.0' encoding='utf-8'?><soap12:Envelope xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:soap12='http://www.w3.org/2003/05/soap-envelope'><soap12:Body><getStaffInfo xmlns='http://www.schedulefly.com/api/'><acct_userid>\(self.usernameField.text)</acct_userid><acct_password>\(self.passwordField.text)</acct_password></getStaffInfo></soap12:Body></soap12:Envelope>"
                 var theRequest = NSMutableURLRequest(URL: NSURL(string: "http://api.schedulefly.com/webservice.asmx")!)
                 theRequest.addValue("application/soap+xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
-                theRequest.addValue(String(countElements(soapMessage)), forHTTPHeaderField: "Content-Length")
+                theRequest.addValue(String(count(soapMessage)), forHTTPHeaderField: "Content-Length")
                 theRequest.HTTPBody = soapMessage.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) // or false
                 
-                let mutableURLRequest = URLRequest.URLRequest.mutableCopy() as NSMutableURLRequest
+                let mutableURLRequest = URLRequest.URLRequest.mutableCopy() as! NSMutableURLRequest
                 mutableURLRequest.setValue("application/soap+xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
-                mutableURLRequest.setValue(String(countElements(soapMessage)), forHTTPHeaderField: "Content-Length")
+                mutableURLRequest.setValue(String(count(soapMessage)), forHTTPHeaderField: "Content-Length")
                 mutableURLRequest.HTTPBody = theRequest.HTTPBody
                 return (mutableURLRequest, nil)
             }
@@ -143,12 +150,12 @@ class LoginViewController: UIViewController {
                 var soapMessage = "<?xml version='1.0' encoding='utf-8'?><soap12:Envelope xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:soap12='http://www.w3.org/2003/05/soap-envelope'><soap12:Body><getStaffCategories xmlns='http://www.schedulefly.com/api/'><acct_userid>\(self.usernameField.text)</acct_userid><acct_password>\(self.passwordField.text)</acct_password></getStaffCategories></soap12:Body></soap12:Envelope>"
                 var theRequest = NSMutableURLRequest(URL: NSURL(string: "http://api.schedulefly.com/webservice.asmx")!)
                 theRequest.addValue("application/soap+xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
-                theRequest.addValue(String(countElements(soapMessage)), forHTTPHeaderField: "Content-Length")
+                theRequest.addValue(String(count(soapMessage)), forHTTPHeaderField: "Content-Length")
                 theRequest.HTTPBody = soapMessage.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) // or false
                 
-                let mutableURLRequest = URLRequest.URLRequest.mutableCopy() as NSMutableURLRequest
+                let mutableURLRequest = URLRequest.URLRequest.mutableCopy() as! NSMutableURLRequest
                 mutableURLRequest.setValue("application/soap+xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
-                mutableURLRequest.setValue(String(countElements(soapMessage)), forHTTPHeaderField: "Content-Length")
+                mutableURLRequest.setValue(String(count(soapMessage)), forHTTPHeaderField: "Content-Length")
                 mutableURLRequest.HTTPBody = theRequest.HTTPBody
                 return (mutableURLRequest, nil)
             }

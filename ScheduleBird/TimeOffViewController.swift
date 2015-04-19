@@ -14,6 +14,7 @@ class TimeOffViewController: UIViewController, UIWebViewDelegate{
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var sidebarButton: UIBarButtonItem!
     var theBool: Bool = false
     var myTimer: NSTimer = NSTimer()
     var counter: Int = 0
@@ -31,9 +32,13 @@ class TimeOffViewController: UIViewController, UIWebViewDelegate{
         activityIndicator.startAnimating()
         webView.loadRequest(requestObj);
         
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         if self.revealViewController() != nil {
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            sidebarButton.target = self.revealViewController()
+            sidebarButton.action = "rightRevealToggle:"
         }
+        
+        self.tabBarController?.selectedIndex = 2
         
         // Do any additional setup after Loading the view.
     }
@@ -49,7 +54,7 @@ class TimeOffViewController: UIViewController, UIWebViewDelegate{
         self.myTimer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: "timerCallback", userInfo: nil, repeats: true)
     }
     
-    func webViewDidFinishLoad(webView: UIWebView!) {
+    func webViewDidFinishLoad(webView: UIWebView) {
         self.title = "Time Off"
         let user = UserInfo()
         let username: String = user.getUsername()

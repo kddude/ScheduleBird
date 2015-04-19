@@ -50,14 +50,12 @@ code_sign() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Alamofire.framework'
   install_framework 'ChameleonFramework.framework'
-  install_framework 'IJReachability.framework'
   install_framework 'Locksmith.framework'
   install_framework 'SWXMLHash.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Alamofire.framework'
   install_framework 'ChameleonFramework.framework'
-  install_framework 'IJReachability.framework'
   install_framework 'Locksmith.framework'
   install_framework 'SWXMLHash.framework'
 fi

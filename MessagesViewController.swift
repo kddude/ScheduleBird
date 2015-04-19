@@ -20,7 +20,7 @@ class MessagesViewController: UIViewController, UIWebViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleBar.topItem?.title = "Loading"
+        self.title = "Loading"
         // Do any additional setup after loading the view, typically from a nib.
         let url = NSURL (string: "http://m.schedulefly.com/");
         let requestObj = NSURLRequest(URL: url!);
@@ -41,8 +41,8 @@ class MessagesViewController: UIViewController, UIWebViewDelegate{
         self.myTimer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: "timerCallback", userInfo: nil, repeats: true)
     }
     
-    func webViewDidFinishLoad(webView: UIWebView!) {
-        titleBar.topItem?.title = "Messages"
+    func webViewDidFinishLoad(webView: UIWebView) {
+        self.title = "Messages"
         let user = UserInfo()
         let username: String = user.getUsername()
         let password: String = user.getPassword()
@@ -77,11 +77,11 @@ class MessagesViewController: UIViewController, UIWebViewDelegate{
             counter++
             if (counter == 10) {
                 counter = 0
-                if titleBar.topItem?.title != "Messages" {
-                    if titleBar.topItem?.title == "Loading..." {
-                        titleBar.topItem?.title = "Loading"
+                if self.title != "Messages" {
+                    if self.title == "Loading..." {
+                        self.title = "Loading"
                     }
-                    titleBar.topItem?.title? += "."
+                    self.title = self.title! + "."
                 }
             }
             if self.progressBar.progress >= 0.95 {

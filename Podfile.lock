@@ -1,31 +1,19 @@
 PODS:
-  - Alamofire (1.1.4)
+  - Alamofire (1.2.0)
   - ChameleonFramework (1.1.2)
-  - IJReachability (0.1.0)
-  - Locksmith (1.2.0)
-  - SWXMLHash (0.6.4)
+  - Locksmith (1.2.1)
+  - SWXMLHash (1.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 1.1)
+  - Alamofire
   - ChameleonFramework
-  - IJReachability (from `https://github.com/Isuru-Nanayakkara/IJReachability.git`)
   - Locksmith
-  - SWXMLHash (~> 0.6.0)
-
-EXTERNAL SOURCES:
-  IJReachability:
-    :git: https://github.com/Isuru-Nanayakkara/IJReachability.git
-
-CHECKOUT OPTIONS:
-  IJReachability:
-    :commit: da69c8f4bed9f82203bb49180fb36091b4cd0d28
-    :git: https://github.com/Isuru-Nanayakkara/IJReachability.git
+  - SWXMLHash
 
 SPEC CHECKSUMS:
-  Alamofire: 6a2cbaebe78a6d469bc55ee37f0a24ba22af76ac
+  Alamofire: d765c5c1713aa64106b0228aaa600a1e6851f68d
   ChameleonFramework: 1b4588efcae564886e1a176fa02fb0f4c81a69b3
-  IJReachability: 3eff33caca50869df09b257bcf712031a56a8575
-  Locksmith: 97fa742bf69a5b9b9bb855dd31c7a9355b952ae5
-  SWXMLHash: 124239a54d4bcc4cf9617326932926204d653757
+  Locksmith: 770f6c5c6e5c5c712d1f00e709c62b8a7240c716
+  SWXMLHash: ab46ebedec2baaeefe16948ad270c2c211735d60
 
 COCOAPODS: 0.36.1

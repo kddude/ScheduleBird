@@ -15,6 +15,7 @@ class PickupShiftsViewController: UIViewController, UIWebViewDelegate{
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var noShiftsView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var sidebarButton: UIBarButtonItem!
     var theBool: Bool = false
     var myTimer: NSTimer = NSTimer()
     var counter = 0
@@ -33,8 +34,10 @@ class PickupShiftsViewController: UIViewController, UIWebViewDelegate{
         activityIndicator.startAnimating()
         webView.loadRequest(requestObj);
         
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         if self.revealViewController() != nil {
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            sidebarButton.target = self.revealViewController()
+            sidebarButton.action = "rightRevealToggle:"
         }
         
         // Do any additional setup after loading the view.
@@ -51,7 +54,7 @@ class PickupShiftsViewController: UIViewController, UIWebViewDelegate{
         self.myTimer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: "timerCallback", userInfo: nil, repeats: true)
     }
     
-    func webViewDidFinishLoad(webView: UIWebView!) {
+    func webViewDidFinishLoad(webView: UIWebView) {
         let user = UserInfo()
         let username: String = user.getUsername()
         let password: String = user.getPassword()

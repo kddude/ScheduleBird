@@ -40,7 +40,7 @@ class WallViewController: UIViewController, UIWebViewDelegate{
         self.myTimer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: "timerCallback", userInfo: nil, repeats: true)
     }
     
-    func webViewDidFinishLoad(webView: UIWebView!) {
+    func webViewDidFinishLoad(webView: UIWebView) {
         self.title = "Message Wall"
         let user = UserInfo()
         let username: String = user.getUsername()

@@ -11,6 +11,15 @@
 		730447DE1ACF6EB4009EB0A3 /* timeoff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 730447DD1ACF6EB4009EB0A3 /* timeoff.jpg */; };
 		730447E31ACF72F8009EB0A3 /* TimeOffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730447E21ACF72F8009EB0A3 /* TimeOffViewController.swift */; };
 		730447E51ACF730C009EB0A3 /* PickupShiftsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730447E41ACF730C009EB0A3 /* PickupShiftsViewController.swift */; };
+		7304481F1ADDC681009EB0A3 /* ShiftsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7304481E1ADDC681009EB0A3 /* ShiftsViewController.swift */; };
+		730448251ADDC74D009EB0A3 /* ShiftsDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730448231ADDC74D009EB0A3 /* ShiftsDayViewController.swift */; };
+		730448261ADDC74D009EB0A3 /* ShiftsDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 730448241ADDC74D009EB0A3 /* ShiftsDayViewController.xib */; };
+		730448291ADDC764009EB0A3 /* ShiftsWeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730448271ADDC764009EB0A3 /* ShiftsWeekViewController.swift */; };
+		7304482A1ADDC764009EB0A3 /* ShiftsWeekViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 730448281ADDC764009EB0A3 /* ShiftsWeekViewController.xib */; };
+		732B926B1AE1A5A400E3708A /* WorkScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732B926A1AE1A5A400E3708A /* WorkScheduleTableViewCell.swift */; };
+		732B926D1AE1A5C200E3708A /* WorkScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732B926C1AE1A5C200E3708A /* WorkScheduleTableViewController.swift */; };
+		732B926F1AE1A5D900E3708A /* WorkScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 732B926E1AE1A5D900E3708A /* WorkScheduleCell.xib */; };
+		732B92721AE212D800E3708A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732B92711AE212D800E3708A /* ProfileViewController.swift */; };
 		73854E831AC7BE55007A301E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73854E821AC7BE55007A301E /* AppDelegate.swift */; };
 		73854E851AC7BE55007A301E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73854E841AC7BE55007A301E /* FirstViewController.swift */; };
 		73854E871AC7BE55007A301E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73854E861AC7BE55007A301E /* SecondViewController.swift */; };
@@ -30,6 +39,10 @@
 		73A3B0AA1ACDD8FC00531FB4 /* WebOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A3B0A91ACDD8FC00531FB4 /* WebOverlayViewController.swift */; };
 		73A3B0AD1ACE0EE200531FB4 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A3B0AC1ACE0EE200531FB4 /* MessagesViewController.swift */; };
 		73A3B0AF1ACE240500531FB4 /* WallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A3B0AE1ACE240500531FB4 /* WallViewController.swift */; };
+		73B0408E1ADF249000CDF765 /* MyScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73B0408D1ADF249000CDF765 /* MyScheduleCell.xib */; };
+		73B040921ADF267400CDF765 /* MyScheduleCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B040911ADF267400CDF765 /* MyScheduleCellTableViewCell.swift */; };
+		73B040941ADF52DC00CDF765 /* ParseDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B040931ADF52DC00CDF765 /* ParseDates.swift */; };
+		73B040981AE06ECA00CDF765 /* ColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B040971AE06EC900CDF765 /* ColorWheel.swift */; };
 		EBED83C66C93B819A303ECBC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93791274ABF98EFCA2A3E9E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -46,10 +59,20 @@
 /* Begin PBXFileReference section */
 		21FE133B53CF20326360747E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5014D82AC341977BDFE23B66 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7302C9601ADDE3A900C8DB0F /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		730447DB1ACF6EA9009EB0A3 /* takeshift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = takeshift.jpg; sourceTree = "<group>"; };
 		730447DD1ACF6EB4009EB0A3 /* timeoff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timeoff.jpg; sourceTree = "<group>"; };
 		730447E21ACF72F8009EB0A3 /* TimeOffViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeOffViewController.swift; sourceTree = "<group>"; };
 		730447E41ACF730C009EB0A3 /* PickupShiftsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupShiftsViewController.swift; sourceTree = "<group>"; };
+		7304481E1ADDC681009EB0A3 /* ShiftsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftsViewController.swift; sourceTree = "<group>"; };
+		730448231ADDC74D009EB0A3 /* ShiftsDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftsDayViewController.swift; sourceTree = "<group>"; };
+		730448241ADDC74D009EB0A3 /* ShiftsDayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShiftsDayViewController.xib; sourceTree = "<group>"; };
+		730448271ADDC764009EB0A3 /* ShiftsWeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftsWeekViewController.swift; sourceTree = "<group>"; };
+		730448281ADDC764009EB0A3 /* ShiftsWeekViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShiftsWeekViewController.xib; sourceTree = "<group>"; };
+		732B926A1AE1A5A400E3708A /* WorkScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		732B926C1AE1A5C200E3708A /* WorkScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkScheduleTableViewController.swift; sourceTree = "<group>"; };
+		732B926E1AE1A5D900E3708A /* WorkScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkScheduleCell.xib; sourceTree = "<group>"; };
+		732B92711AE212D800E3708A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		73854E7D1AC7BE55007A301E /* ScheduleBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73854E811AC7BE55007A301E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73854E821AC7BE55007A301E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +85,6 @@
 		73854E991AC7BE56007A301E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73854E9A1AC7BE56007A301E /* ScheduleBirdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBirdTests.swift; sourceTree = "<group>"; };
 		73854EA71AC7BE84007A301E /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = SOURCE_ROOT; };
-		73854EA91AC7BE8A007A301E /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		73854EAA1AC7BF2D007A301E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		73854EAE1AC9CB53007A301E /* ParseXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseXML.swift; path = ../ParseXML.swift; sourceTree = "<group>"; };
 		73A3B0911ACB41C200531FB4 /* forest.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = forest.gif; sourceTree = "<group>"; };
@@ -76,6 +98,10 @@
 		73A3B0A91ACDD8FC00531FB4 /* WebOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebOverlayViewController.swift; path = ../WebOverlayViewController.swift; sourceTree = "<group>"; };
 		73A3B0AC1ACE0EE200531FB4 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesViewController.swift; path = ../MessagesViewController.swift; sourceTree = "<group>"; };
 		73A3B0AE1ACE240500531FB4 /* WallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WallViewController.swift; path = ../WallViewController.swift; sourceTree = "<group>"; };
+		73B0408D1ADF249000CDF765 /* MyScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyScheduleCell.xib; sourceTree = "<group>"; };
+		73B040911ADF267400CDF765 /* MyScheduleCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyScheduleCellTableViewCell.swift; sourceTree = "<group>"; };
+		73B040931ADF52DC00CDF765 /* ParseDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseDates.swift; sourceTree = "<group>"; };
+		73B040971AE06EC900CDF765 /* ColorWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorWheel.swift; sourceTree = "<group>"; };
 		B93791274ABF98EFCA2A3E9E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,10 +133,22 @@
 			name = TimeOffAndPickup;
 			sourceTree = "<group>";
 		};
+		730448221ADDC6ED009EB0A3 /* Shifts */ = {
+			isa = PBXGroup;
+			children = (
+				7304481E1ADDC681009EB0A3 /* ShiftsViewController.swift */,
+				730448231ADDC74D009EB0A3 /* ShiftsDayViewController.swift */,
+				730448241ADDC74D009EB0A3 /* ShiftsDayViewController.xib */,
+				730448271ADDC764009EB0A3 /* ShiftsWeekViewController.swift */,
+				730448281ADDC764009EB0A3 /* ShiftsWeekViewController.xib */,
+			);
+			name = Shifts;
+			sourceTree = "<group>";
+		};
 		73854E741AC7BE55007A301E = {
 			isa = PBXGroup;
 			children = (
-				73854EA91AC7BE8A007A301E /* Podfile */,
+				7302C9601ADDE3A900C8DB0F /* Podfile */,
 				73854E7F1AC7BE55007A301E /* ScheduleBird */,
 				73854E971AC7BE56007A301E /* ScheduleBirdTests */,
 				73854E7E1AC7BE55007A301E /* Products */,
@@ -131,6 +169,7 @@
 		73854E7F1AC7BE55007A301E /* ScheduleBird */ = {
 			isa = PBXGroup;
 			children = (
+				730448221ADDC6ED009EB0A3 /* Shifts */,
 				730447E11ACF703B009EB0A3 /* TimeOffAndPickup */,
 				73A3B0A41ACCCD0A00531FB4 /* Sidebar */,
 				73854E821AC7BE55007A301E /* AppDelegate.swift */,
@@ -140,8 +179,15 @@
 				73854E8D1AC7BE56007A301E /* LaunchScreen.xib */,
 				73854EA71AC7BE84007A301E /* UserInfo.swift */,
 				73854EAE1AC9CB53007A301E /* ParseXML.swift */,
+				73B040931ADF52DC00CDF765 /* ParseDates.swift */,
 				73A3B0901ACB41B300531FB4 /* Images */,
 				73854E801AC7BE55007A301E /* Supporting Files */,
+				73B0408D1ADF249000CDF765 /* MyScheduleCell.xib */,
+				73B040911ADF267400CDF765 /* MyScheduleCellTableViewCell.swift */,
+				73B040971AE06EC900CDF765 /* ColorWheel.swift */,
+				732B926A1AE1A5A400E3708A /* WorkScheduleTableViewCell.swift */,
+				732B926C1AE1A5C200E3708A /* WorkScheduleTableViewController.swift */,
+				732B926E1AE1A5D900E3708A /* WorkScheduleCell.xib */,
 			);
 			path = ScheduleBird;
 			sourceTree = "<group>";
@@ -197,6 +243,7 @@
 				73854EAA1AC7BF2D007A301E /* LoginViewController.swift */,
 				73A3B0A51ACD11AE00531FB4 /* AccountTableViewCell.swift */,
 				73A3B0A21ACCC97F00531FB4 /* AccountTableViewController.swift */,
+				732B92711AE212D800E3708A /* ProfileViewController.swift */,
 			);
 			name = Sidebar;
 			sourceTree = "<group>";
@@ -304,11 +351,15 @@
 				73854E8A1AC7BE55007A301E /* Main.storyboard in Resources */,
 				73854E8F1AC7BE56007A301E /* LaunchScreen.xib in Resources */,
 				730447DE1ACF6EB4009EB0A3 /* timeoff.jpg in Resources */,
+				7304482A1ADDC764009EB0A3 /* ShiftsWeekViewController.xib in Resources */,
 				73A3B0921ACB41C200531FB4 /* forest.gif in Resources */,
 				73854E8C1AC7BE55007A301E /* Images.xcassets in Resources */,
 				73A3B0941ACB536400531FB4 /* beach.gif in Resources */,
 				73A3B0961ACB6DAB00531FB4 /* feet.JPG in Resources */,
 				730447DC1ACF6EA9009EB0A3 /* takeshift.jpg in Resources */,
+				732B926F1AE1A5D900E3708A /* WorkScheduleCell.xib in Resources */,
+				73B0408E1ADF249000CDF765 /* MyScheduleCell.xib in Resources */,
+				730448261ADDC74D009EB0A3 /* ShiftsDayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,18 +427,27 @@
 			files = (
 				73854EA81AC7BE84007A301E /* UserInfo.swift in Sources */,
 				73854EAF1AC9CB53007A301E /* ParseXML.swift in Sources */,
+				73B040921ADF267400CDF765 /* MyScheduleCellTableViewCell.swift in Sources */,
 				73854E871AC7BE55007A301E /* SecondViewController.swift in Sources */,
 				73A3B09F1ACC744600531FB4 /* SWRevealViewController.m in Sources */,
 				73854E831AC7BE55007A301E /* AppDelegate.swift in Sources */,
 				73854EAB1AC7BF2D007A301E /* LoginViewController.swift in Sources */,
+				732B926D1AE1A5C200E3708A /* WorkScheduleTableViewController.swift in Sources */,
+				730448251ADDC74D009EB0A3 /* ShiftsDayViewController.swift in Sources */,
 				730447E51ACF730C009EB0A3 /* PickupShiftsViewController.swift in Sources */,
 				73A3B0AF1ACE240500531FB4 /* WallViewController.swift in Sources */,
 				73A3B0A61ACD11AE00531FB4 /* AccountTableViewCell.swift in Sources */,
+				730448291ADDC764009EB0A3 /* ShiftsWeekViewController.swift in Sources */,
 				73A3B0A31ACCC98000531FB4 /* AccountTableViewController.swift in Sources */,
 				73A3B0AA1ACDD8FC00531FB4 /* WebOverlayViewController.swift in Sources */,
+				732B92721AE212D800E3708A /* ProfileViewController.swift in Sources */,
+				73B040941ADF52DC00CDF765 /* ParseDates.swift in Sources */,
+				732B926B1AE1A5A400E3708A /* WorkScheduleTableViewCell.swift in Sources */,
 				73A3B0AD1ACE0EE200531FB4 /* MessagesViewController.swift in Sources */,
+				7304481F1ADDC681009EB0A3 /* ShiftsViewController.swift in Sources */,
 				73854E851AC7BE55007A301E /* FirstViewController.swift in Sources */,
 				730447E31ACF72F8009EB0A3 /* TimeOffViewController.swift in Sources */,
+				73B040981AE06ECA00CDF765 /* ColorWheel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
