@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		730447DC1ACF6EA9009EB0A3 /* takeshift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 730447DB1ACF6EA9009EB0A3 /* takeshift.jpg */; };
+		730447DE1ACF6EB4009EB0A3 /* timeoff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 730447DD1ACF6EB4009EB0A3 /* timeoff.jpg */; };
+		730447E31ACF72F8009EB0A3 /* TimeOffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730447E21ACF72F8009EB0A3 /* TimeOffViewController.swift */; };
+		730447E51ACF730C009EB0A3 /* PickupShiftsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730447E41ACF730C009EB0A3 /* PickupShiftsViewController.swift */; };
+		730FE6081AE8676C00276F21 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730FE6071AE8676C00276F21 /* DatePickerViewController.swift */; };
+		730FE60A1AE9849200276F21 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730FE6091AE9849200276F21 /* TabBarViewController.swift */; };
+		732B926B1AE1A5A400E3708A /* WorkScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732B926A1AE1A5A400E3708A /* WorkScheduleTableViewCell.swift */; };
+		732B926D1AE1A5C200E3708A /* WorkScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732B926C1AE1A5C200E3708A /* WorkScheduleTableViewController.swift */; };
+		732B92721AE212D800E3708A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732B92711AE212D800E3708A /* ProfileViewController.swift */; };
+		737C8D2A1AFD37A400C3E66B /* EmployeesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C8D291AFD37A400C3E66B /* EmployeesTableViewController.swift */; };
+		73854E831AC7BE55007A301E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73854E821AC7BE55007A301E /* AppDelegate.swift */; };
+		73854E851AC7BE55007A301E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73854E841AC7BE55007A301E /* FirstViewController.swift */; };
+		73854E871AC7BE55007A301E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73854E861AC7BE55007A301E /* SecondViewController.swift */; };
+		73854E8A1AC7BE55007A301E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73854E881AC7BE55007A301E /* Main.storyboard */; };
+		73854E8C1AC7BE55007A301E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73854E8B1AC7BE55007A301E /* Images.xcassets */; };
+		73854E8F1AC7BE56007A301E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73854E8D1AC7BE56007A301E /* LaunchScreen.xib */; };
+		73854E9B1AC7BE56007A301E /* ScheduleBirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73854E9A1AC7BE56007A301E /* ScheduleBirdTests.swift */; };
+		73854EA81AC7BE84007A301E /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73854EA71AC7BE84007A301E /* UserInfo.swift */; };
+		73854EAB1AC7BF2D007A301E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73854EAA1AC7BF2D007A301E /* LoginViewController.swift */; };
+		73854EAF1AC9CB53007A301E /* ParseXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73854EAE1AC9CB53007A301E /* ParseXML.swift */; };
+		738E41331AF01A660073593B /* GiveupShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738E41321AF01A660073593B /* GiveupShiftViewController.swift */; };
+		73A3B0921ACB41C200531FB4 /* forest.gif in Resources */ = {isa = PBXBuildFile; fileRef = 73A3B0911ACB41C200531FB4 /* forest.gif */; };
+		73A3B0941ACB536400531FB4 /* beach.gif in Resources */ = {isa = PBXBuildFile; fileRef = 73A3B0931ACB536400531FB4 /* beach.gif */; };
+		73A3B0961ACB6DAB00531FB4 /* feet.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 73A3B0951ACB6DAB00531FB4 /* feet.JPG */; };
+		73A3B09F1ACC744600531FB4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A3B09E1ACC744600531FB4 /* SWRevealViewController.m */; };
+		73A3B0AA1ACDD8FC00531FB4 /* WebOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A3B0A91ACDD8FC00531FB4 /* WebOverlayViewController.swift */; };
+		73A3B0AD1ACE0EE200531FB4 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A3B0AC1ACE0EE200531FB4 /* MessagesViewController.swift */; };
+		73A3B0AF1ACE240500531FB4 /* WallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A3B0AE1ACE240500531FB4 /* WallViewController.swift */; };
+		73B0408E1ADF249000CDF765 /* MyScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73B0408D1ADF249000CDF765 /* MyScheduleCell.xib */; };
+		73B040921ADF267400CDF765 /* MyScheduleCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B040911ADF267400CDF765 /* MyScheduleCellTableViewCell.swift */; };
+		73B040941ADF52DC00CDF765 /* ParseDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B040931ADF52DC00CDF765 /* ParseDates.swift */; };
+		73B040981AE06ECA00CDF765 /* ColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B040971AE06EC900CDF765 /* ColorWheel.swift */; };
+		73BE43821AEAC5B700C497B7 /* SendMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE43811AEAC5B700C497B7 /* SendMessageViewController.swift */; };
+		73ECADA51AFEBE2D00C4669D /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECADA41AFEBE2D00C4669D /* EmployeeTableViewCell.swift */; };
+		73ECADA71AFED8EA00C4669D /* OtherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECADA61AFED8EA00C4669D /* OtherProfileViewController.swift */; };
+		EBED83C66C93B819A303ECBC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93791274ABF98EFCA2A3E9E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73854E951AC7BE56007A301E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73854E751AC7BE55007A301E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73854E7C1AC7BE55007A301E;
+			remoteInfo = ScheduleBird;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21FE133B53CF20326360747E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5014D82AC341977BDFE23B66 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7302C9601ADDE3A900C8DB0F /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		730447DB1ACF6EA9009EB0A3 /* takeshift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = takeshift.jpg; sourceTree = "<group>"; };
+		730447DD1ACF6EB4009EB0A3 /* timeoff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timeoff.jpg; sourceTree = "<group>"; };
+		730447E21ACF72F8009EB0A3 /* TimeOffViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeOffViewController.swift; sourceTree = "<group>"; };
+		730447E41ACF730C009EB0A3 /* PickupShiftsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupShiftsViewController.swift; sourceTree = "<group>"; };
+		730FE6071AE8676C00276F21 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		730FE6091AE9849200276F21 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		732B926A1AE1A5A400E3708A /* WorkScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		732B926C1AE1A5C200E3708A /* WorkScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkScheduleTableViewController.swift; sourceTree = "<group>"; };
+		732B92711AE212D800E3708A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		737C8D291AFD37A400C3E66B /* EmployeesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeesTableViewController.swift; sourceTree = "<group>"; };
+		73854E7D1AC7BE55007A301E /* ScheduleBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73854E811AC7BE55007A301E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73854E821AC7BE55007A301E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		73854E841AC7BE55007A301E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		73854E861AC7BE55007A301E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		73854E891AC7BE55007A301E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		73854E8B1AC7BE55007A301E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		73854E8E1AC7BE56007A301E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		73854E941AC7BE56007A301E /* ScheduleBirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScheduleBirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73854E991AC7BE56007A301E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73854E9A1AC7BE56007A301E /* ScheduleBirdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBirdTests.swift; sourceTree = "<group>"; };
+		73854EA71AC7BE84007A301E /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = SOURCE_ROOT; };
+		73854EAA1AC7BF2D007A301E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		73854EAE1AC9CB53007A301E /* ParseXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseXML.swift; path = ../ParseXML.swift; sourceTree = "<group>"; };
+		738E41321AF01A660073593B /* GiveupShiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiveupShiftViewController.swift; sourceTree = "<group>"; };
+		73A3B0911ACB41C200531FB4 /* forest.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = forest.gif; sourceTree = "<group>"; };
+		73A3B0931ACB536400531FB4 /* beach.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = beach.gif; sourceTree = "<group>"; };
+		73A3B0951ACB6DAB00531FB4 /* feet.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = feet.JPG; sourceTree = "<group>"; };
+		73A3B09C1ACC744500531FB4 /* ScheduleBird-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScheduleBird-Bridging-Header.h"; sourceTree = "<group>"; };
+		73A3B09D1ACC744600531FB4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		73A3B09E1ACC744600531FB4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		73A3B0A91ACDD8FC00531FB4 /* WebOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebOverlayViewController.swift; path = ../WebOverlayViewController.swift; sourceTree = "<group>"; };
+		73A3B0AC1ACE0EE200531FB4 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesViewController.swift; path = ../MessagesViewController.swift; sourceTree = "<group>"; };
+		73A3B0AE1ACE240500531FB4 /* WallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WallViewController.swift; path = ../WallViewController.swift; sourceTree = "<group>"; };
+		73B0408D1ADF249000CDF765 /* MyScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyScheduleCell.xib; sourceTree = "<group>"; };
+		73B040911ADF267400CDF765 /* MyScheduleCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyScheduleCellTableViewCell.swift; sourceTree = "<group>"; };
+		73B040931ADF52DC00CDF765 /* ParseDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseDates.swift; sourceTree = "<group>"; };
+		73B040971AE06EC900CDF765 /* ColorWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorWheel.swift; sourceTree = "<group>"; };
+		73BE43811AEAC5B700C497B7 /* SendMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageViewController.swift; sourceTree = "<group>"; };
+		73ECADA41AFEBE2D00C4669D /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		73ECADA61AFED8EA00C4669D /* OtherProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherProfileViewController.swift; sourceTree = "<group>"; };
+		B93791274ABF98EFCA2A3E9E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73854E7A1AC7BE55007A301E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBED83C66C93B819A303ECBC /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73854E911AC7BE56007A301E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		730447E11ACF703B009EB0A3 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				73854E841AC7BE55007A301E /* FirstViewController.swift */,
+				732B926C1AE1A5C200E3708A /* WorkScheduleTableViewController.swift */,
+				730447E41ACF730C009EB0A3 /* PickupShiftsViewController.swift */,
+				730447E21ACF72F8009EB0A3 /* TimeOffViewController.swift */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		73854E741AC7BE55007A301E = {
+			isa = PBXGroup;
+			children = (
+				7302C9601ADDE3A900C8DB0F /* Podfile */,
+				73854E7F1AC7BE55007A301E /* ScheduleBird */,
+				73854E971AC7BE56007A301E /* ScheduleBirdTests */,
+				73854E7E1AC7BE55007A301E /* Products */,
+				76E2DC8BDF46AB822E9ED729 /* Pods */,
+				9A6C42613649F4052D1F219F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		73854E7E1AC7BE55007A301E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73854E7D1AC7BE55007A301E /* ScheduleBird.app */,
+				73854E941AC7BE56007A301E /* ScheduleBirdTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73854E7F1AC7BE55007A301E /* ScheduleBird */ = {
+			isa = PBXGroup;
+			children = (
+				73F8648D1B007DFB0094A58F /* Other */,
+				730447E11ACF703B009EB0A3 /* TabBar */,
+				73A3B0A41ACCCD0A00531FB4 /* Sidebar */,
+				73854E821AC7BE55007A301E /* AppDelegate.swift */,
+				73854E881AC7BE55007A301E /* Main.storyboard */,
+				73854E8B1AC7BE55007A301E /* Images.xcassets */,
+				73854E8D1AC7BE56007A301E /* LaunchScreen.xib */,
+				73854EA71AC7BE84007A301E /* UserInfo.swift */,
+				73854EAE1AC9CB53007A301E /* ParseXML.swift */,
+				73B040931ADF52DC00CDF765 /* ParseDates.swift */,
+				73854E801AC7BE55007A301E /* Supporting Files */,
+				73A3B0901ACB41B300531FB4 /* Images */,
+				73B040971AE06EC900CDF765 /* ColorWheel.swift */,
+			);
+			path = ScheduleBird;
+			sourceTree = "<group>";
+		};
+		73854E801AC7BE55007A301E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				73A3B09D1ACC744600531FB4 /* SWRevealViewController.h */,
+				73A3B09E1ACC744600531FB4 /* SWRevealViewController.m */,
+				73854E811AC7BE55007A301E /* Info.plist */,
+				73A3B09C1ACC744500531FB4 /* ScheduleBird-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		73854E971AC7BE56007A301E /* ScheduleBirdTests */ = {
+			isa = PBXGroup;
+			children = (
+				73854E9A1AC7BE56007A301E /* ScheduleBirdTests.swift */,
+				73854E981AC7BE56007A301E /* Supporting Files */,
+			);
+			path = ScheduleBirdTests;
+			sourceTree = "<group>";
+		};
+		73854E981AC7BE56007A301E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				73854E991AC7BE56007A301E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		73A3B0901ACB41B300531FB4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				730447DB1ACF6EA9009EB0A3 /* takeshift.jpg */,
+				730447DD1ACF6EB4009EB0A3 /* timeoff.jpg */,
+				73A3B0951ACB6DAB00531FB4 /* feet.JPG */,
+				73A3B0931ACB536400531FB4 /* beach.gif */,
+				73A3B0911ACB41C200531FB4 /* forest.gif */,
+			);
+			name = Images;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		73A3B0A41ACCCD0A00531FB4 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				73A3B0AE1ACE240500531FB4 /* WallViewController.swift */,
+				73A3B0A91ACDD8FC00531FB4 /* WebOverlayViewController.swift */,
+				73A3B0AC1ACE0EE200531FB4 /* MessagesViewController.swift */,
+				73854E861AC7BE55007A301E /* SecondViewController.swift */,
+				73854EAA1AC7BF2D007A301E /* LoginViewController.swift */,
+				732B92711AE212D800E3708A /* ProfileViewController.swift */,
+				73ECADA61AFED8EA00C4669D /* OtherProfileViewController.swift */,
+			);
+			name = Sidebar;
+			sourceTree = "<group>";
+		};
+		73F8648D1B007DFB0094A58F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				73B0408D1ADF249000CDF765 /* MyScheduleCell.xib */,
+				73B040911ADF267400CDF765 /* MyScheduleCellTableViewCell.swift */,
+				732B926A1AE1A5A400E3708A /* WorkScheduleTableViewCell.swift */,
+				730FE6071AE8676C00276F21 /* DatePickerViewController.swift */,
+				730FE6091AE9849200276F21 /* TabBarViewController.swift */,
+				73BE43811AEAC5B700C497B7 /* SendMessageViewController.swift */,
+				738E41321AF01A660073593B /* GiveupShiftViewController.swift */,
+				737C8D291AFD37A400C3E66B /* EmployeesTableViewController.swift */,
+				73ECADA41AFEBE2D00C4669D /* EmployeeTableViewCell.swift */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		76E2DC8BDF46AB822E9ED729 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5014D82AC341977BDFE23B66 /* Pods.debug.xcconfig */,
+				21FE133B53CF20326360747E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9A6C42613649F4052D1F219F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B93791274ABF98EFCA2A3E9E /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		73854E7C1AC7BE55007A301E /* ScheduleBird */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73854E9E1AC7BE56007A301E /* Build configuration list for PBXNativeTarget "ScheduleBird" */;
+			buildPhases = (
+				F3DD1030531FEEF6CBAB1F32 /* Check Pods Manifest.lock */,
+				73854E791AC7BE55007A301E /* Sources */,
+				73854E7A1AC7BE55007A301E /* Frameworks */,
+				73854E7B1AC7BE55007A301E /* Resources */,
+				1E6D693E6FE884F690ACC32E /* Embed Pods Frameworks */,
+				D803BC17EE515FD3857B3610 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScheduleBird;
+			productName = ScheduleBird;
+			productReference = 73854E7D1AC7BE55007A301E /* ScheduleBird.app */;
+			productType = "com.apple.product-type.application";
+		};
+		73854E931AC7BE56007A301E /* ScheduleBirdTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73854EA11AC7BE56007A301E /* Build configuration list for PBXNativeTarget "ScheduleBirdTests" */;
+			buildPhases = (
+				73854E901AC7BE56007A301E /* Sources */,
+				73854E911AC7BE56007A301E /* Frameworks */,
+				73854E921AC7BE56007A301E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73854E961AC7BE56007A301E /* PBXTargetDependency */,
+			);
+			name = ScheduleBirdTests;
+			productName = ScheduleBirdTests;
+			productReference = 73854E941AC7BE56007A301E /* ScheduleBirdTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73854E751AC7BE55007A301E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = kdas;
+				TargetAttributes = {
+					73854E7C1AC7BE55007A301E = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 98LS96WZFY;
+					};
+					73854E931AC7BE56007A301E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 73854E7C1AC7BE55007A301E;
+					};
+				};
+			};
+			buildConfigurationList = 73854E781AC7BE55007A301E /* Build configuration list for PBXProject "ScheduleSpry" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 73854E741AC7BE55007A301E;
+			productRefGroup = 73854E7E1AC7BE55007A301E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73854E7C1AC7BE55007A301E /* ScheduleBird */,
+				73854E931AC7BE56007A301E /* ScheduleBirdTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73854E7B1AC7BE55007A301E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73854E8A1AC7BE55007A301E /* Main.storyboard in Resources */,
+				73854E8F1AC7BE56007A301E /* LaunchScreen.xib in Resources */,
+				730447DE1ACF6EB4009EB0A3 /* timeoff.jpg in Resources */,
+				73A3B0921ACB41C200531FB4 /* forest.gif in Resources */,
+				73854E8C1AC7BE55007A301E /* Images.xcassets in Resources */,
+				73A3B0941ACB536400531FB4 /* beach.gif in Resources */,
+				73A3B0961ACB6DAB00531FB4 /* feet.JPG in Resources */,
+				730447DC1ACF6EA9009EB0A3 /* takeshift.jpg in Resources */,
+				73B0408E1ADF249000CDF765 /* MyScheduleCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73854E921AC7BE56007A301E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E6D693E6FE884F690ACC32E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D803BC17EE515FD3857B3610 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3DD1030531FEEF6CBAB1F32 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73854E791AC7BE55007A301E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73854EA81AC7BE84007A301E /* UserInfo.swift in Sources */,
+				73854EAF1AC9CB53007A301E /* ParseXML.swift in Sources */,
+				73B040921ADF267400CDF765 /* MyScheduleCellTableViewCell.swift in Sources */,
+				73854E871AC7BE55007A301E /* SecondViewController.swift in Sources */,
+				73A3B09F1ACC744600531FB4 /* SWRevealViewController.m in Sources */,
+				73854E831AC7BE55007A301E /* AppDelegate.swift in Sources */,
+				73854EAB1AC7BF2D007A301E /* LoginViewController.swift in Sources */,
+				732B926D1AE1A5C200E3708A /* WorkScheduleTableViewController.swift in Sources */,
+				730447E51ACF730C009EB0A3 /* PickupShiftsViewController.swift in Sources */,
+				73BE43821AEAC5B700C497B7 /* SendMessageViewController.swift in Sources */,
+				73ECADA71AFED8EA00C4669D /* OtherProfileViewController.swift in Sources */,
+				737C8D2A1AFD37A400C3E66B /* EmployeesTableViewController.swift in Sources */,
+				73A3B0AF1ACE240500531FB4 /* WallViewController.swift in Sources */,
+				730FE60A1AE9849200276F21 /* TabBarViewController.swift in Sources */,
+				73A3B0AA1ACDD8FC00531FB4 /* WebOverlayViewController.swift in Sources */,
+				732B92721AE212D800E3708A /* ProfileViewController.swift in Sources */,
+				73B040941ADF52DC00CDF765 /* ParseDates.swift in Sources */,
+				738E41331AF01A660073593B /* GiveupShiftViewController.swift in Sources */,
+				73ECADA51AFEBE2D00C4669D /* EmployeeTableViewCell.swift in Sources */,
+				732B926B1AE1A5A400E3708A /* WorkScheduleTableViewCell.swift in Sources */,
+				73A3B0AD1ACE0EE200531FB4 /* MessagesViewController.swift in Sources */,
+				730FE6081AE8676C00276F21 /* DatePickerViewController.swift in Sources */,
+				73854E851AC7BE55007A301E /* FirstViewController.swift in Sources */,
+				730447E31ACF72F8009EB0A3 /* TimeOffViewController.swift in Sources */,
+				73B040981AE06ECA00CDF765 /* ColorWheel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73854E901AC7BE56007A301E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73854E9B1AC7BE56007A301E /* ScheduleBirdTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		73854E961AC7BE56007A301E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73854E7C1AC7BE55007A301E /* ScheduleBird */;
+			targetProxy = 73854E951AC7BE56007A301E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		73854E881AC7BE55007A301E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73854E891AC7BE55007A301E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		73854E8D1AC7BE56007A301E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73854E8E1AC7BE56007A301E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		73854E9C1AC7BE56007A301E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		73854E9D1AC7BE56007A301E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		73854E9F1AC7BE56007A301E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5014D82AC341977BDFE23B66 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ScheduleBird/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ScheduleBird/ScheduleBird-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		73854EA01AC7BE56007A301E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21FE133B53CF20326360747E /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ScheduleBird/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ScheduleBird/ScheduleBird-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		73854EA21AC7BE56007A301E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ScheduleBirdTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScheduleBird.app/ScheduleBird";
+			};
+			name = Debug;
+		};
+		73854EA31AC7BE56007A301E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ScheduleBirdTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScheduleBird.app/ScheduleBird";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73854E781AC7BE55007A301E /* Build configuration list for PBXProject "ScheduleSpry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73854E9C1AC7BE56007A301E /* Debug */,
+				73854E9D1AC7BE56007A301E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73854E9E1AC7BE56007A301E /* Build configuration list for PBXNativeTarget "ScheduleBird" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73854E9F1AC7BE56007A301E /* Debug */,
+				73854EA01AC7BE56007A301E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73854EA11AC7BE56007A301E /* Build configuration list for PBXNativeTarget "ScheduleBirdTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73854EA21AC7BE56007A301E /* Debug */,
+				73854EA31AC7BE56007A301E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 73854E751AC7BE55007A301E /* Project object */;
+}

@@ -16,13 +16,22 @@ class PickupShiftsViewController: UIViewController, UIWebViewDelegate{
     @IBOutlet weak var noShiftsView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var sidebarButton: UIBarButtonItem!
+    var refreshControl:UIRefreshControl!
     var theBool: Bool = false
     var myTimer: NSTimer = NSTimer()
     var counter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Pickup Shifts"
+        
+        webView.hidden = true
+        navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor(red: 245/255, green: 246/255, blue: 245/255, alpha: 1)
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        webView.scrollView.addSubview(refreshControl)
+        
+//        self.title = "Pickup Shifts"
         // Do any additional setup after loading the view, typically from a nib.
         let url = NSURL (string: "http://m.schedulefly.com/");
         let requestObj = NSURLRequest(URL: url!);
@@ -34,13 +43,25 @@ class PickupShiftsViewController: UIViewController, UIWebViewDelegate{
         activityIndicator.startAnimating()
         webView.loadRequest(requestObj);
         
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         if self.revealViewController() != nil {
             sidebarButton.target = self.revealViewController()
             sidebarButton.action = "rightRevealToggle:"
         }
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if self.revealViewController() != nil {
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        }
+    }
+    
+    func refresh(sender:AnyObject)
+    {
+        self.webView.reload()
+        self.refreshControl.endRefreshing()
     }
     
     override func didReceiveMemoryWarning() {

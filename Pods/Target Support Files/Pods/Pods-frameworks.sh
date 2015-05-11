@@ -52,10 +52,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'ChameleonFramework.framework'
   install_framework 'Locksmith.framework'
   install_framework 'SWXMLHash.framework'
+  install_framework 'pop.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Alamofire.framework'
   install_framework 'ChameleonFramework.framework'
   install_framework 'Locksmith.framework'
   install_framework 'SWXMLHash.framework'
+  install_framework 'pop.framework'
 fi

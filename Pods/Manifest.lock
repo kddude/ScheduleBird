@@ -2,18 +2,21 @@ PODS:
   - Alamofire (1.2.0)
   - ChameleonFramework (1.1.2)
   - Locksmith (1.2.1)
+  - pop (1.0.7)
   - SWXMLHash (1.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - ChameleonFramework
   - Locksmith
+  - pop (~> 1.0)
   - SWXMLHash
 
 SPEC CHECKSUMS:
   Alamofire: d765c5c1713aa64106b0228aaa600a1e6851f68d
   ChameleonFramework: 1b4588efcae564886e1a176fa02fb0f4c81a69b3
   Locksmith: 770f6c5c6e5c5c712d1f00e709c62b8a7240c716
+  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
   SWXMLHash: ab46ebedec2baaeefe16948ad270c2c211735d60
 
 COCOAPODS: 0.36.1

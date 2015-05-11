@@ -10,13 +10,11 @@ import UIKit
 
 class WorkScheduleTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var monthLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var shiftTimeLabel: UILabel!
-    @IBOutlet weak var backgroundSquare: UIImageView!
+    @IBOutlet weak var AMPMLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-
+    @IBOutlet weak var noteLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

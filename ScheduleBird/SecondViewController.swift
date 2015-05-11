@@ -41,6 +41,7 @@ class SecondViewController: UITableViewController {
                     NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain!)
                     self.loginLabel.hidden = false
                     self.logoutLabel.hidden = true
+                    self.performSegueWithIdentifier("goto_login", sender: self)
                 }
                 logoutController.addAction(yesAction)
                 self.presentViewController(logoutController, animated: true, completion: nil)

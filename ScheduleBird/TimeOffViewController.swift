@@ -15,13 +15,21 @@ class TimeOffViewController: UIViewController, UIWebViewDelegate{
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var sidebarButton: UIBarButtonItem!
+    var refreshControl:UIRefreshControl!
     var theBool: Bool = false
     var myTimer: NSTimer = NSTimer()
     var counter: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Loading"
+        
+        navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor(red: 245/255, green: 246/255, blue: 245/255, alpha: 1)
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        webView.scrollView.addSubview(refreshControl)
+        
+//        self.title = "Loading"
         // Do any additional setup after Loading the view, typically from a nib.
         let url = NSURL (string: "http://m.schedulefly.com/timeoff.aspx");
         let requestObj = NSURLRequest(URL: url!);
@@ -32,20 +40,29 @@ class TimeOffViewController: UIViewController, UIWebViewDelegate{
         activityIndicator.startAnimating()
         webView.loadRequest(requestObj);
         
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         if self.revealViewController() != nil {
             sidebarButton.target = self.revealViewController()
             sidebarButton.action = "rightRevealToggle:"
         }
-        
-        self.tabBarController?.selectedIndex = 2
-        
         // Do any additional setup after Loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if self.revealViewController() != nil {
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func refresh(sender:AnyObject)
+    {
+        self.webView.reload()
+        self.refreshControl.endRefreshing()
     }
     
     func webViewDidStartLoad(webView: UIWebView) {
@@ -55,7 +72,6 @@ class TimeOffViewController: UIViewController, UIWebViewDelegate{
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {
-        self.title = "Time Off"
         let user = UserInfo()
         let username: String = user.getUsername()
         let password: String = user.getPassword()
@@ -95,12 +111,6 @@ class TimeOffViewController: UIViewController, UIWebViewDelegate{
             counter++
             if (counter == 10) {
                 counter = 0
-                if self.title != "Time Off" {
-                    if self.title == "Loading..." {
-                        self.title = "Loading"
-                    }
-                    self.title = self.title! + "."
-                }
             }
             if self.progressBar.progress >= 0.95 {
                 self.progressBar.progress = 0.95

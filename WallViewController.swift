@@ -12,6 +12,7 @@ class WallViewController: UIViewController, UIWebViewDelegate{
     
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var progressBar: UIProgressView!
+    var refreshControl:UIRefreshControl!
 
     var theBool: Bool = false
     var myTimer: NSTimer = NSTimer()
@@ -19,6 +20,14 @@ class WallViewController: UIViewController, UIWebViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        webView.hidden = true
+        
+        navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor(red: 245/255, green: 246/255, blue: 245/255, alpha: 1)
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        webView.scrollView.addSubview(refreshControl)
+        
         self.title = "Loading"
         // Do any additional setup after loading the view, typically from a nib.
         let url = NSURL (string: "http://m.schedulefly.com/");
@@ -27,6 +36,12 @@ class WallViewController: UIViewController, UIWebViewDelegate{
         webView.loadRequest(requestObj);
         
         // Do any additional setup after loading the view.
+    }
+    
+    func refresh(sender:AnyObject)
+    {
+        self.webView.reload()
+        self.refreshControl.endRefreshing()
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,6 +82,7 @@ class WallViewController: UIViewController, UIWebViewDelegate{
         if self.theBool {
             if self.progressBar.progress >= 1 {
                 self.progressBar.hidden = true
+                webView.hidden = false
                 self.myTimer.invalidate()
             } else {
                 self.progressBar.progress += 0.1

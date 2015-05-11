@@ -13,6 +13,7 @@ class ParseDates {
     var day: String?
     var month: String?
     var date: String?
+    var year: String?
     
     init(stringToParse: String) {
         self.stringToParse = stringToParse
@@ -38,7 +39,7 @@ class ParseDates {
     }
     
     func getMonth() {
-        let monthDictionary = ["1": "Jan", "2": "Feb", "3": "Mar", "4": "Apr", "5": "May", "6": "June", "7": "July", "8": "August", "9": "September", "10": "October", "11": "November", "12": "December"]
+        let monthDictionary = ["1": "Jan", "2": "Feb", "3": "Mar", "4": "Apr", "5": "May", "6": "June", "7": "July", "8": "Aug", "9": "Sep", "10": "Oct", "11": "Nov", "12": "Dec"]
         let match = matchesForRegexInText("[-]{1}\\s(\\d*)", text: self.stringToParse)
         var newMatch = match[0]
         newMatch.removeAtIndex(newMatch.startIndex)
@@ -50,12 +51,22 @@ class ParseDates {
         let match = matchesForRegexInText("\\/([\\d*]{1,})\\/", text: self.stringToParse)
         var newMatch = match[0].substringToIndex(match[0].endIndex.predecessor())
         newMatch = newMatch.stringByReplacingOccurrencesOfString("/", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        self.date = newMatch
+        var date = newMatch
+        if newMatch.toInt() < 10 {
+            date = "0\(date)"
+        }
+        self.date = date
+    }
+    
+    func getYear() {
+        let match = matchesForRegexInText("\\d\\d\\d\\d", text: self.stringToParse)
+        self.year = match[0]
     }
     
     func setDates() {
         getDay()
         getMonth()
         getDate()
+        getYear()
     }
 }
